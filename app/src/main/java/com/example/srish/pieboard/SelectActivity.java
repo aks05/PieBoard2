@@ -16,14 +16,16 @@ public class SelectActivity extends AppCompatActivity {
 
     public void Im1(View view) {
         i=1;
-        Intent intent =new Intent(this, ParaActivity.class);
-                startActivity(intent);
+        Intent intent =new Intent(this, WifiActivity.class);
+        startActivity(intent);
     }
 
 
     public void Im2(View view) {
         i=2;
-        Intent intent =new Intent(this, ParaActivity.class);
+        Intent intent =new Intent(this, WifiActivity.class);
         startActivity(intent);
     }
+
+
 }
