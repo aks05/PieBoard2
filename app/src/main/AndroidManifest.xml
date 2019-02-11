@@ -22,6 +22,8 @@
         </activity>
         <activity android:name=".Instrnc" />
         <activity android:name=".SelectActivity" />
+        <activity android:name=".WifiActivity">
+        </activity>
         <activity android:name=".ParaActivity">
         </activity>
         <activity android:name=".VRActivity" />
