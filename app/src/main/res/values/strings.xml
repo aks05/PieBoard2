@@ -119,4 +119,5 @@
         <item>65</item>
 
     </string-array>
+    <string name="choose_wifi">Choose your boards Wifi</string>
 </resources>
