@@ -14,7 +14,7 @@ public class SelectActivity extends AppCompatActivity {
     }
 
     public void Im1(View view) {
-        Intent intent =new Intent(this, ParaActivity.class);
+        Intent intent =new Intent(this, WifiActivity.class);
         Bundle extras = new Bundle();
         extras.putInt(EXTRA_OPTION,1);
         intent.putExtras(extras);
@@ -23,7 +23,7 @@ public class SelectActivity extends AppCompatActivity {
 
 
     public void Im2(View view) {
-        Intent intent =new Intent(this, ParaActivity.class);
+        Intent intent =new Intent(this, WifiActivity.class);
         Bundle extras = new Bundle();
         extras.putInt(EXTRA_OPTION,2);
         intent.putExtras(extras);

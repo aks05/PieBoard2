@@ -27,11 +27,14 @@
             android:parentActivityName=".WelcomeActivity"/>
         <activity android:name=".SelectActivity"
             android:parentActivityName=".Instrnc"/>
-        <activity android:name=".ParaActivity"
+        <activity android:name=".WifiActivity"
             android:parentActivityName=".SelectActivity">
         </activity>
+        <activity android:name=".ParaActivity">
+        </activity>
         <activity android:name=".VRActivity" />
-        <activity android:name=".showResultActivity">
+        <activity android:name=".showResultActivity"
+            android:parentActivityName=".ParaActivity">
         </activity>
         <activity android:name=".IRActivity">
         </activity>
