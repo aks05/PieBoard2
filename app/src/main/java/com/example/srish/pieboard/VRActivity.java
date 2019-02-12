@@ -45,19 +45,37 @@ public class VRActivity extends AppCompatActivity implements
         if (spinner != null) {
             spinner.setAdapter(adapter);
         }
-        Spinner spinner2 = findViewById(R.id.row_1);
-        if (spinner2 != null) {
-            spinner2.setOnItemSelectedListener(this);
+        if(option==1) {
+            Spinner spinner2 = findViewById(R.id.row_1);
+            if (spinner2 != null) {
+                spinner2.setOnItemSelectedListener(this);
+            }
+            // Create ArrayAdapter using the string array and default spinner layout.
+            ArrayAdapter<?> adapter2 = ArrayAdapter.createFromResource(this,
+                    R.array.row1_array, android.R.layout.simple_spinner_item);
+            // Specify the layout to use when the list of choices appears.
+            adapter2.setDropDownViewResource
+                    (android.R.layout.simple_spinner_dropdown_item);
+            // Apply the adapter to the spinner.
+            if (spinner2 != null) {
+                spinner2.setAdapter(adapter2);
+            }
         }
-        // Create ArrayAdapter using the string array and default spinner layout.
-        ArrayAdapter<?> adapter2 = ArrayAdapter.createFromResource(this,
-                R.array.row2_array, android.R.layout.simple_spinner_item);
-        // Specify the layout to use when the list of choices appears.
-        adapter2.setDropDownViewResource
-                (android.R.layout.simple_spinner_dropdown_item);
-        // Apply the adapter to the spinner.
-        if (spinner2 != null) {
-            spinner2.setAdapter(adapter2);
+        if(option==2) {
+            Spinner spinner2 = findViewById(R.id.row_1);
+            if (spinner2 != null) {
+                spinner2.setOnItemSelectedListener(this);
+            }
+            // Create ArrayAdapter using the string array and default spinner layout.
+            ArrayAdapter<?> adapter2 = ArrayAdapter.createFromResource(this,
+                    R.array.row2_array, android.R.layout.simple_spinner_item);
+            // Specify the layout to use when the list of choices appears.
+            adapter2.setDropDownViewResource
+                    (android.R.layout.simple_spinner_dropdown_item);
+            // Apply the adapter to the spinner.
+            if (spinner2 != null) {
+                spinner2.setAdapter(adapter2);
+            }
         }
         Spinner spinner3 = findViewById(R.id.col_2);
         if (spinner3 != null) {
@@ -73,19 +91,37 @@ public class VRActivity extends AppCompatActivity implements
         if (spinner3 != null) {
             spinner3.setAdapter(adapter3);
         }
-        Spinner spinner4 = findViewById(R.id.row_2);
-        if (spinner4 != null) {
-            spinner4.setOnItemSelectedListener(this);
+        if(option==1) {
+            Spinner spinner4 = findViewById(R.id.row_2);
+            if (spinner4 != null) {
+                spinner4.setOnItemSelectedListener(this);
+            }
+            // Create ArrayAdapter using the string array and default spinner layout.
+            ArrayAdapter<?> adapter4 = ArrayAdapter.createFromResource(this,
+                    R.array.row1_array, android.R.layout.simple_spinner_item);
+            // Specify the layout to use when the list of choices appears.
+            adapter4.setDropDownViewResource
+                    (android.R.layout.simple_spinner_dropdown_item);
+            // Apply the adapter to the spinner.
+            if (spinner4 != null) {
+                spinner4.setAdapter(adapter4);
+            }
         }
-        // Create ArrayAdapter using the string array and default spinner layout.
-        ArrayAdapter<?> adapter4 = ArrayAdapter.createFromResource(this,
-                R.array.row2_array, android.R.layout.simple_spinner_item);
-        // Specify the layout to use when the list of choices appears.
-        adapter4.setDropDownViewResource
-                (android.R.layout.simple_spinner_dropdown_item);
-        // Apply the adapter to the spinner.
-        if (spinner4 != null) {
-            spinner4.setAdapter(adapter4);
+        if(option==2) {
+            Spinner spinner4 = findViewById(R.id.row_2);
+            if (spinner4 != null) {
+                spinner4.setOnItemSelectedListener(this);
+            }
+            // Create ArrayAdapter using the string array and default spinner layout.
+            ArrayAdapter<?> adapter4 = ArrayAdapter.createFromResource(this,
+                    R.array.row2_array, android.R.layout.simple_spinner_item);
+            // Specify the layout to use when the list of choices appears.
+            adapter4.setDropDownViewResource
+                    (android.R.layout.simple_spinner_dropdown_item);
+            // Apply the adapter to the spinner.
+            if (spinner4 != null) {
+                spinner4.setAdapter(adapter4);
+            }
         }
     }
 
@@ -120,7 +156,7 @@ public class VRActivity extends AppCompatActivity implements
     }
     public void Submit (View view)
     {
-         setResult(RESULT_OK,intent);
-         finish();
+        setResult(RESULT_OK,intent);
+        finish();
     }
 }

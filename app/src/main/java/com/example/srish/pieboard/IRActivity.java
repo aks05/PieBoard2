@@ -21,6 +21,9 @@ public class IRActivity extends AppCompatActivity implements
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ir);
         intent=new Intent();
+        Intent get=getIntent();
+        Bundle extras=get.getExtras();
+        int option=extras.getInt(SelectActivity.EXTRA_OPTION);
         // Create the spinner col_1.
         Spinner spinner = findViewById(R.id.col_1);
         if (spinner != null) {
@@ -36,19 +39,37 @@ public class IRActivity extends AppCompatActivity implements
         if (spinner != null) {
             spinner.setAdapter(adapter);
         }
-        Spinner spinner2 = findViewById(R.id.row_1);
-        if (spinner2 != null) {
-            spinner2.setOnItemSelectedListener(this);
+        if(option==1) {
+            Spinner spinner2 = findViewById(R.id.row_1);
+            if (spinner2 != null) {
+                spinner2.setOnItemSelectedListener(this);
+            }
+            // Create ArrayAdapter using the string array and default spinner layout.
+            ArrayAdapter<?> adapter2 = ArrayAdapter.createFromResource(this,
+                    R.array.row1_array, android.R.layout.simple_spinner_item);
+            // Specify the layout to use when the list of choices appears.
+            adapter2.setDropDownViewResource
+                    (android.R.layout.simple_spinner_dropdown_item);
+            // Apply the adapter to the spinner.
+            if (spinner2 != null) {
+                spinner2.setAdapter(adapter2);
+            }
         }
-        // Create ArrayAdapter using the string array and default spinner layout.
-        ArrayAdapter<?> adapter2 = ArrayAdapter.createFromResource(this,
-                R.array.row2_array, android.R.layout.simple_spinner_item);
-        // Specify the layout to use when the list of choices appears.
-        adapter2.setDropDownViewResource
-                (android.R.layout.simple_spinner_dropdown_item);
-        // Apply the adapter to the spinner.
-        if (spinner2 != null) {
-            spinner2.setAdapter(adapter2);
+        if(option==2) {
+            Spinner spinner2 = findViewById(R.id.row_1);
+            if (spinner2 != null) {
+                spinner2.setOnItemSelectedListener(this);
+            }
+            // Create ArrayAdapter using the string array and default spinner layout.
+            ArrayAdapter<?> adapter2 = ArrayAdapter.createFromResource(this,
+                    R.array.row2_array, android.R.layout.simple_spinner_item);
+            // Specify the layout to use when the list of choices appears.
+            adapter2.setDropDownViewResource
+                    (android.R.layout.simple_spinner_dropdown_item);
+            // Apply the adapter to the spinner.
+            if (spinner2 != null) {
+                spinner2.setAdapter(adapter2);
+            }
         }
     }
 
