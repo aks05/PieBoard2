@@ -1,55 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:textAlignment="gravity"
-    tools:context=".Instrnc">
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:paddingTop="24dp"
+    android:paddingBottom="16dp"
+    android:id="@+id/relativeLayout">
 
-    <TextView
-        android:id="@+id/textViewI1"
+
+    <android.support.v4.view.ViewPager xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/viewPager"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:background="@color/colorPrimary"
-        android:padding="8dp"
-        android:text="@string/textViewI1"
-        android:textColor="@android:color/white"
-        android:textSize="20sp" />
-
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_below="@+id/textViewI1"
-        android:layout_alignParentStart="false"
-        android:layout_alignParentTop="false"
-        android:layout_marginStart="0dp"
-        android:layout_marginTop="0dp">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:onClick="gotit"
-            android:orientation="vertical">
-
-            <TextView
-                android:id="@+id/textViewI2"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:padding="8dp"
-                android:text="@string/textViewI2"
-                android:textAppearance="@android:style/TextAppearance.DeviceDefault" />
-
-            <Button
-                android:id="@+id/button2"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="#25E506"
-                android:onClick="gotit"
-                android:text="@string/ButtonI1" />
-
-        </LinearLayout>
-    </ScrollView>
+        android:layout_height="match_parent">
+    </android.support.v4.view.ViewPager>
 
 </RelativeLayout>

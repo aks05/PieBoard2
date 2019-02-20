@@ -2,9 +2,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.srish.pieboard">
 
-    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
-    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
-    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
 
     <application
         android:allowBackup="true"
@@ -20,24 +17,32 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".WelcomeActivity"
-            android:parentActivityName=".MainActivity">
-        </activity>
+        <activity
+            android:name=".WelcomeActivity"
+            android:label="@string/Activity_Welcome" />
         <activity android:name=".Instrnc"
-            android:parentActivityName=".WelcomeActivity"/>
-        <activity android:name=".SelectActivity"
-            android:parentActivityName=".Instrnc"/>
-        <activity android:name=".WifiActivity"
-            android:parentActivityName=".SelectActivity">
+            android:label="@string/Activity_Instrnc">
         </activity>
-        <activity android:name=".ParaActivity">
+        <activity
+            android:name=".SelectActivity"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:label="@string/Activity_Select" />
+        <activity
+            android:name=".ParaActivity"
+            android:label="@string/title_activity_para"
+            android:parentActivityName=".SelectActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.srish.pieboard.SelectActivity" />
         </activity>
-        <activity android:name=".VRActivity" />
-        <activity android:name=".showResultActivity"
-            android:parentActivityName=".ParaActivity">
-        </activity>
-        <activity android:name=".IRActivity">
-        </activity>
-</application>
+        <activity android:name=".VRActivity"
+            android:label="Select Point"/>
+        <activity android:name=".IRActivity"
+            android:label="Select Point"/>
+        <activity
+            android:name=".showResultActivity"
+            android:label="Result"/>
+    </application>
 
 </manifest>

@@ -9,7 +9,7 @@
     <string name="textViewI2">Here Instructions will be displayed.We will upload instruction soon.</string>
     <string name="ButtonI1">OK Got it</string>
     <string name="breadboard_image">Breadboard Image</string>
-    <string name="title_activity_para">ParaActivity</string>
+    <string name="title_activity_para">Select Parameter</string>
     <string name="sAtext"><u>Select your Breadboard</u></string>
     <string-array name="col_array">
         <item>a</item>
@@ -119,5 +119,18 @@
         <item>65</item>
 
     </string-array>
-    <string name="choose_wifi">Choose your boards Wifi</string>
+    <string name="reset">RESET</string>
+    <string name="Activity_Welcome">Get Started</string>
+    <string name="Activity_Select">Select Breadboard</string>
+    <string name="Activity_Para">Select Parameter</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="action_settings">Settings</string>
+    <string name="result">RESULT</string>
+    <string name="submit">SUBMIT</string>
+    <string name="instrnc">OK</string>
+    <string name="welcome">SKIP</string>
+    <string name="Activity_Instrnc">Instruction</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="nav_header_title">PieBoard</string>
 </resources>

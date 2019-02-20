@@ -29,7 +29,6 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     public void onDestroy(){
-        //System.exit(0);
         super.onDestroy();
         Runtime.getRuntime().gc();
     }
